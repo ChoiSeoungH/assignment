@@ -83,7 +83,7 @@ public class ShopController {
   }
 
   private void printMemberMenu() {
-    outer : while (true) {
+    while (true) {
       System.out.println(log+"님 로그인중");
       System.out.println("[1.쇼핑] [2.장바구니목록] [0.뒤로가기]");
       int menu = InputManger.getValue("메뉴 입력 >> ", 0, 4);
@@ -92,7 +92,7 @@ public class ShopController {
           System.out.println("뒤로가기");
           return;
         case 1://쇼핑
-          if (printCartMenu()) break;
+          printCartMenu();
           break;
         case 2://장바구니
           udao.printMyCart(log);
@@ -101,21 +101,25 @@ public class ShopController {
     }
   }
 
-  private boolean printCartMenu() {
-    System.out.println("[1.내 장바구니] [2.삭제] [3.구입] [0.뒤로가기]");
-    int menu = InputManger.getValue("메뉴 입력 >> ", 0, 4);
-    switch (menu) {
-      case 0:
-        System.out.println("뒤로가기");
-        return true;
-      case 1: //내장바구니
-        break;
-      case 2: //삭제
-        break;
-      case 3: //구입
-        break;
+  private void printCartMenu() {
+    while (true) {
+      System.out.println("[1.내 장바구니] [2.삭제] [3.구입] [0.뒤로가기]");
+      int menu = InputManger.getValue("메뉴 입력 >> ", 0, 4);
+      switch (menu) {
+        case 0:
+          System.out.println("뒤로가기");
+          return;
+        case 1: //내장바구니
+          udao.printMyCart(log);
+          break;
+        case 2: //최신 상품 삭제
+          udao.deleteMyCartItem(log);
+          break;
+        case 3: //구입
+          idao.buyItem(log,udao);
+          break;
+      }
     }
-    return false;
   }
 
 }

@@ -2,6 +2,7 @@ package dao;
 
 import Utils.InputManger;
 import vo.Cart;
+import vo.Item;
 import vo.User;
 
 import java.util.ArrayList;
@@ -128,5 +129,34 @@ public class UserDAO {
         System.out.println(c);
       }
     }
+  }
+
+  public void deleteMyCartItem(String log) {
+    printMyCart(log);
+    String delName = InputManger.getValue("삭제할 상품 >> ");
+    if (!hasItem(log, delName)) {
+      System.out.println("상품이이 없습니다.");
+      return;
+    }
+    for (int i = cartList.size()-1; i >= 0; i--) {
+      if (cartList.get(i).getUserId().equals(log) && cartList.get(i).getItemName().equals(delName)) {
+        cartList.remove(i);
+        System.out.println("삭제완료");
+        return;
+      }
+    }
+  }
+  private boolean hasItem(String log, String delName) {
+    for (Cart c : cartList) {
+      if (c.getUserId().equals(log) && c.getItemName().equals(delName)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public void addItemtoMyCart(String log, String item) {
+    cartList.add(new Cart(log, item));
+    printMyCart(log);
   }
 }

@@ -1,3 +1,8 @@
 
+Œ
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¾ïØe8õÂ½Ç1
 9
-java:S1643"Use a StringBuilder instead.(÷Úº8ìè°ºÇ1
+java:S1643"Use a StringBuilder instead.(÷Úº8õÂ½Ç1
+L	java:S106%"+Replace this use of System.out by a logger.(´‹¹öşÿÿÿÿ8‘õÂ½Ç1
+G	java:S106-"+Replace this use of System.out by a logger.(ˆ¥Êô8’õÂ½Ç1
+L	java:S1061"+Replace this use of System.out by a logger.(–ì£æøÿÿÿÿ8ÉµÊ½Ç1
