@@ -24,3 +24,5 @@ M	java:S106—"+Replace this use of System.out by a logger.(¥ûù»þÿÿÿÿ8®¨à¿Ç1
 H	java:S106¥"+Replace this use of System.out by a logger.(¨Õ¸§8¯¨à¿Ç1
 >	java:S131§""Add a default case to this switch.(€ä¿;8¯¨à¿Ç1
 M	java:S106©"+Replace this use of System.out by a logger.(¥ûù»þÿÿÿÿ8¯¨à¿Ç1
+F
+java:S1128"$Remove this unused import 'vo.Cart'.(¼¥°­üÿÿÿÿ8â´…ÀÇ1

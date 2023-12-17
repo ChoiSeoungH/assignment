@@ -8,11 +8,11 @@ import vo.Cart;
 
 public class ShopController {
 
-  ItemDAO idao;
-  UserDAO udao;
-  String log;
+  private ItemDAO idao;
+  private UserDAO udao;
+  private String log;
 
-  void init() {
+  private void init() {
     idao = new ItemDAO();
     udao = new UserDAO();
     FileManager.loadFile(idao, udao);

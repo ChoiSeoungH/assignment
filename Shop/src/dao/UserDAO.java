@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class UserDAO {
   private final ArrayList<Cart> cartList;
   private final ArrayList<User> userList;
-  public String login;
 
   public UserDAO() {
     userList = new ArrayList<>();
