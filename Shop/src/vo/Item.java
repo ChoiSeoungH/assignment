@@ -26,4 +26,8 @@ public class Item {
   public String getCategory() {
     return category;
   }
+
+  public String toString() {
+    return name+"\t"+price+"\t"+category;
+  }
 }

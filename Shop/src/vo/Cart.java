@@ -20,4 +20,7 @@ public class Cart {
     return itemName;
   }
 
+  public String toString() {
+    return userId+"\t"+itemName;
+  }
 }

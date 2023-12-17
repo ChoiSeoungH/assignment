@@ -12,7 +12,7 @@ public class ItemDAO {
   }
 
   public void addItemFromData(String itemData) {
-    String[] temp = itemData.split("/n");
+    String[] temp = itemData.split("\n");
     for (String s : temp) {
       String[] info = s.split("/");
       itemList.add(new Item(info[0], Integer.parseInt(info[1]), info[2]));

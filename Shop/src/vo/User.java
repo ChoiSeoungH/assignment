@@ -26,4 +26,9 @@ public class User {
   public String getName() {
     return name;
   }
+
+  @Override
+  public String toString() {
+    return id+"\t"+pw+"\t"+name;
+  }
 }

@@ -17,3 +17,11 @@ E
 Shop/src/vo/Cart.java,e\b\eb3ed432afca96fcf223df0b13234400dd730dc4
 O
 Shop/src/Utils/InputManger.java,1\f\1f606b3f711a1ca09749f68592af39be9b58400b
+^
+.Shop/src/기존예제/클배장바구니2.java,1\1\116e0fb3094d8756e0ceee6d20b36e596ced93b1
+A
+Shop/src/item.txt,3\9\39c6ff0f1ddecfe1cfa40d6291123f223555254b
+A
+Shop/src/cart.txt,7\7\77120751de8272de456a0cc0f53b82beac9e9883
+A
+Shop/src/user.txt,7\e\7ec5de876b017762355fb75c368660ebe383c9fa

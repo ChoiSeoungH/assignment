@@ -27,13 +27,19 @@ public class ShopController {
           System.out.println("종료");
           return;
         case 1: //가입
+          udao.joinUser();
           break;
         case 2: //탈퇴
+          udao.quitUser();
           break;
         case 3: //로그인
-          printMemberMenu();
+          log = udao.login();
+          if (log!=null) {
+            printMemberMenu();
+          }
           break;
         case 4: //로그아웃
+          if (!isLogin()) continue;
           break;
         case 100: // 관리자
           printAdminMenu();
@@ -41,6 +47,16 @@ public class ShopController {
       }//eos
 
     }//eow
+  }
+
+  private boolean isLogin() {
+    if (log==null) {
+      System.out.println("로그인 후 이용");
+      return false;
+    }
+    log = null;
+    System.out.println("로그아웃 완료");
+    return true;
   }
 
   private void printMainMenu() {
