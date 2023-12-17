@@ -1,0 +1,14 @@
+
+7
+java:S16432"Use a StringBuilder instead.(ˆ±öŠøÿÿÿÿ
+1
+java:S16433"Use a StringBuilder instead.(êÚ¯
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÚâĞûÿÿÿÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(²Á
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Óæßğ
+L	java:S106"+Replace this use of System.out by a logger.(³öÛ‡ıÿÿÿÿ8ÏºÕ¹Ç1
+L	java:S106"+Replace this use of System.out by a logger.(ğ’’ôøÿÿÿÿ8ÒºÕ¹Ç1
+L	java:S106)"+Replace this use of System.out by a logger.(Œ©µúÿÿÿÿ8ŒøºÇ1
+L	java:S1067"+Replace this use of System.out by a logger.(şùı”ûÿÿÿÿ8‘øºÇ1

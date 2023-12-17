@@ -1,0 +1,19 @@
+
+I
+Shop/src/_Main/_Main.java,7\3\73bd678e66a246d00807ab35007e010cc5280304
+O
+Shop/src/Utils/FileManager.java,2\9\2983b9c96537d9f4436520dacacafea022dcf38a
+I
+Shop/src/dao/ItemDAO.java,5\e\5e117e2a61347ddd15b117b30b9aece41ee1729a
+I
+Shop/src/dao/UserDAO.java,4\f\4f54a5f17a1edf65e4c8d53c346a25e8770cb8b2
+W
+'Shop/src/Controller/ShopController.java,4\7\47c5d2560b6690b04351571d5d0baff28247c78f
+E
+Shop/src/vo/User.java,c\c\cc93c949b1ed2f10eb935b9a7b172bf951e2c0f9
+E
+Shop/src/vo/Item.java,0\a\0a5cff3ddc378b59f06f50f719078b1a7cdbe582
+E
+Shop/src/vo/Cart.java,e\b\eb3ed432afca96fcf223df0b13234400dd730dc4
+O
+Shop/src/Utils/InputManger.java,1\f\1f606b3f711a1ca09749f68592af39be9b58400b

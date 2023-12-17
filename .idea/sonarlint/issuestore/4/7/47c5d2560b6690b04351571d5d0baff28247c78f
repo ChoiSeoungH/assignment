@@ -1,0 +1,20 @@
+
+o
+java:S1192"RDefine a constant instead of duplicating this literal "ë©”ë‰´ ì…ë ¥ >> " 4 times.(ƒÓü8›¥‘ºÇ1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î8¥‘ºÇ1
+=	java:S131""Add a default case to this switch.(€ä¿;8Í¥‘ºÇ1
+G	java:S106"+Replace this use of System.out by a logger.(³Ñ¤8Í¥‘ºÇ1
+G	java:S106/"+Replace this use of System.out by a logger.(øİŠÿ8Î¥‘ºÇ1
+L	java:S1063"+Replace this use of System.out by a logger.(¤Øù¶üÿÿÿÿ8Ï¥‘ºÇ1
+=	java:S1315""Add a default case to this switch.(€ä¿;8Ğ¥‘ºÇ1
+L	java:S1067"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8Ğ¥‘ºÇ1
+]
+java:S1119E";Refactor the code to remove this label and the need for it.(¸¾øİıÿÿÿÿ8¨““ºÇ1
+;
+java:S1065E"Remove this unused label.(¸¾øİıÿÿÿÿ8Úø”ºÇ1
+L	java:S106F"+Replace this use of System.out by a logger.(¼•ä°ÿÿÿÿÿ8Ñ¥‘ºÇ1
+=	java:S131H""Add a default case to this switch.(€ä¿;8Ò¥‘ºÇ1
+L	java:S106J"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8Ò¥‘ºÇ1
+G	java:S106V"+Replace this use of System.out by a logger.(¨Õ¸§8Ô¥‘ºÇ1
+=	java:S131X""Add a default case to this switch.(€ä¿;8Õ¥‘ºÇ1
+L	java:S106Z"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8Õ¥‘ºÇ1
