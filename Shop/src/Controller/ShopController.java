@@ -4,6 +4,7 @@ import Utils.FileManager;
 import Utils.InputManger;
 import dao.ItemDAO;
 import dao.UserDAO;
+import vo.Cart;
 
 public class ShopController {
 
@@ -83,6 +84,7 @@ public class ShopController {
 
   private void printMemberMenu() {
     outer : while (true) {
+      System.out.println(log+"님 로그인중");
       System.out.println("[1.쇼핑] [2.장바구니목록] [0.뒤로가기]");
       int menu = InputManger.getValue("메뉴 입력 >> ", 0, 4);
       switch (menu) {
@@ -90,9 +92,10 @@ public class ShopController {
           System.out.println("뒤로가기");
           return;
         case 1://쇼핑
+          if (printCartMenu()) break;
           break;
         case 2://장바구니
-          if (printCartMenu()) break;
+          udao.printMyCart(log);
           break;
       }
     }

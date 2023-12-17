@@ -120,4 +120,13 @@ public class UserDAO {
     System.out.println("로그인 완료");
     return id;
   }
+
+  public void printMyCart(String log) {
+    System.out.println("회원 아이디 상품");
+    for (Cart c : cartList) {
+      if (c.getUserId().equals(log)) {
+        System.out.println(c);
+      }
+    }
+  }
 }

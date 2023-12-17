@@ -1,24 +1,25 @@
 
 o
-java:S1192"RDefine a constant instead of duplicating this literal "ë©”ë‰´ ì…ë ¥ >> " 4 times.(ƒÓü8Íêš¼Ç1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î8Ïêš¼Ç1
+java:S1192"RDefine a constant instead of duplicating this literal "ë©”ë‰´ ì…ë ¥ >> " 4 times.(ƒÓü8šÆã¼Ç1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î8›Æã¼Ç1
 8
-java:S3626*"Remove this redundant jump.(¥Ì¸È8ÁÅÍ¼Ç1
-=	java:S131""Add a default case to this switch.(€ä¿;8•ëš¼Ç1
-G	java:S106"+Replace this use of System.out by a logger.(³Ñ¤8–ëš¼Ç1
-G	java:S1066"+Replace this use of System.out by a logger.(¥¦â8™ëš¼Ç1
-G	java:S106:"+Replace this use of System.out by a logger.(Ş¿ü®8›ëš¼Ç1
-G	java:S106?"+Replace this use of System.out by a logger.(øİŠÿ8œëš¼Ç1
-L	java:S106C"+Replace this use of System.out by a logger.(¤Øù¶üÿÿÿÿ8ëš¼Ç1
-=	java:S131E""Add a default case to this switch.(€ä¿;8šëš¼Ç1
-L	java:S106G"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8Ÿëš¼Ç1
+java:S3626+"Remove this redundant jump.(¥Ì¸È8ÚÆã¼Ç1
+=	java:S131""Add a default case to this switch.(€ä¿;8ÜÆã¼Ç1
+G	java:S106"+Replace this use of System.out by a logger.(³Ñ¤8ŠÇã¼Ç1
+G	java:S1067"+Replace this use of System.out by a logger.(¥¦â8Çã¼Ç1
+G	java:S106;"+Replace this use of System.out by a logger.(Ş¿ü®8•Çã¼Ç1
+G	java:S106@"+Replace this use of System.out by a logger.(øİŠÿ8¡Çã¼Ç1
+L	java:S106D"+Replace this use of System.out by a logger.(¤Øù¶üÿÿÿÿ8¢Çã¼Ç1
+=	java:S131F""Add a default case to this switch.(€ä¿;8¢Çã¼Ç1
+L	java:S106H"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8£Çã¼Ç1
 ]
-java:S1119U";Refactor the code to remove this label and the need for it.(¸¾øİıÿÿÿÿ8œëš¼Ç1
+java:S1119V";Refactor the code to remove this label and the need for it.(¸¾øİıÿÿÿÿ8¥Çã¼Ç1
 ;
-java:S1065U"Remove this unused label.(¸¾øİıÿÿÿÿ8œëš¼Ç1
-L	java:S106V"+Replace this use of System.out by a logger.(¼•ä°ÿÿÿÿÿ8 ëš¼Ç1
-=	java:S131X""Add a default case to this switch.(€ä¿;8ëš¼Ç1
-L	java:S106Z"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8”ÔÇ¼Ç1
-G	java:S106f"+Replace this use of System.out by a logger.(¨Õ¸§8¾ÜÈ¼Ç1
-=	java:S131h""Add a default case to this switch.(€ä¿;8Ÿëš¼Ç1
-L	java:S106j"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8¿ÜÈ¼Ç1
+java:S1065V"Remove this unused label.(¸¾øİıÿÿÿÿ8¥Çã¼Ç1
+F	java:S106W"+Replace this use of System.out by a logger.(Ë¦âX8¥Çã¼Ç1
+L	java:S106X"+Replace this use of System.out by a logger.(¼•ä°ÿÿÿÿÿ8¥Çã¼Ç1
+=	java:S131Z""Add a default case to this switch.(€ä¿;8¦Çã¼Ç1
+L	java:S106\"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8¦Çã¼Ç1
+G	java:S106i"+Replace this use of System.out by a logger.(¨Õ¸§8§Çã¼Ç1
+=	java:S131k""Add a default case to this switch.(€ä¿;8¨Çã¼Ç1
+L	java:S106m"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8©Çã¼Ç1
