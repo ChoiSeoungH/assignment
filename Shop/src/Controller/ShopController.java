@@ -25,6 +25,7 @@ public class ShopController {
       int menu = Utils.InputManger.getValue("메뉴 입력 >> ", 0, 4, 100);
       switch (menu) {
         case 0: //종료
+          FileManager.saveFile(idao,udao);
           System.out.println("종료");
           return;
         case 1: //가입
@@ -153,7 +154,7 @@ public class ShopController {
           printCartMenu();
           break;
         case 2://장바구니
-          udao.printMyCart(log);
+          udao.printMyCart(log,idao);
           break;
       }
     }
@@ -168,7 +169,7 @@ public class ShopController {
           System.out.println("뒤로가기");
           return;
         case 1: //내장바구니
-          udao.printMyCart(log);
+          udao.printMyCart(log,idao);
           break;
         case 2: //최신 상품 삭제
           udao.deleteMyCartItem(log);

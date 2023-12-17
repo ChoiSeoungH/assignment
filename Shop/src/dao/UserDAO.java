@@ -2,6 +2,7 @@ package dao;
 
 import Utils.InputManger;
 import vo.Cart;
+import vo.Item;
 import vo.User;
 
 import java.util.ArrayList;
@@ -93,6 +94,7 @@ public class UserDAO {
       System.out.println("비밀번호가 일치 하지 않습니다");
       return;
     }
+    deleteAllCartItem(id);
     System.out.println(userList.get(delIdx));
     userList.remove(delIdx);
     System.out.println("회원탈퇴 완료");
@@ -122,11 +124,13 @@ public class UserDAO {
 
   public void printMyCart(String log) {
     System.out.println("회원 아이디 상품");
+    int total=0;
     for (Cart c : cartList) {
       if (c.getUserId().equals(log)) {
         System.out.println(c);
       }
     }
+
   }
 
   public void deleteMyCartItem(String log) {
@@ -182,8 +186,9 @@ public class UserDAO {
   }
 
   public void printCart() {
+    int i=0;
     for (Cart c : cartList) {
-      System.out.println(c);
+      System.out.printf("%d\t %s\t %s%n",++i,c.getUserId(),c.getItemName());
     }
   }
 
@@ -203,8 +208,8 @@ public class UserDAO {
   }
 
   public void deleteCart() {
-    int delIdx = InputManger.getValue("삭제할 카트 >> ", 0, cartList.size());
-    userList.remove(delIdx);
+    int delIdx = InputManger.getValue("삭제할 카트[%d~%d] >> ".formatted(1,cartList.size()), 1, cartList.size())-1;
+    cartList.remove(delIdx);
     System.out.println("장바구니삭제 완료");
   }
 
@@ -229,7 +234,25 @@ public class UserDAO {
       System.out.println("아이디가 존재하지 않습니다.");
       return;
     }
+    deleteAllCartItem(id);
     userList.remove(delIdx);
     System.out.println("회원삭제 완료");
+  }
+
+  public void printMyCart(String log, ItemDAO idao) {
+    System.out.println("회원 아이디 상품");
+    int total=0;
+    for (Cart c : cartList) {
+      if (c.getUserId().equals(log)) {
+        System.out.print(c);
+        for (Item i : idao.getItemList()) {
+          if (c.getItemName().equals(i.getName())) {
+            System.out.print(" "+i.getPrice()+"원\n");
+            total += i.getPrice();
+          }
+        }
+      }
+    }
+    System.out.println("총액 : "+total+"원");
   }
 }

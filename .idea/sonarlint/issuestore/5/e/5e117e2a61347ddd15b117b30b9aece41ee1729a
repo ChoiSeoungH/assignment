@@ -1,15 +1,17 @@
 
+z	java:S135_"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8ÚŒÈ¿Ç1
 Œ
-java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¾ïØe8¾ïş¾Ç1
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¾ïØe8ÛŒÈ¿Ç1
 9
-java:S1643"Use a StringBuilder instead.(÷Úº8Àïş¾Ç1
-L	java:S106%"+Replace this use of System.out by a logger.(´‹¹öşÿÿÿÿ8áïş¾Ç1
-G	java:S106-"+Replace this use of System.out by a logger.(ˆ¥Êô8ãïş¾Ç1
-L	java:S1061"+Replace this use of System.out by a logger.(–ì£æøÿÿÿÿ8ãïş¾Ç1
+java:S1643"Use a StringBuilder instead.(÷Úº8ÛŒÈ¿Ç1
+L	java:S106%"+Replace this use of System.out by a logger.(´‹¹öşÿÿÿÿ8ñŒÈ¿Ç1
+G	java:S106-"+Replace this use of System.out by a logger.(ˆ¥Êô8òŒÈ¿Ç1
+L	java:S1061"+Replace this use of System.out by a logger.(–ì£æøÿÿÿÿ8òŒÈ¿Ç1
 H
-java:S1172@"+Remove this unused method parameter "udao".(²üæ‰8åïş¾Ç1
-L	java:S106C"+Replace this use of System.out by a logger.(ñæÃæøÿÿÿÿ8åïş¾Ç1
-L	java:S106K"+Replace this use of System.out by a logger.(›áßûÿÿÿÿ8èïş¾Ç1
-L	java:S106Z"+Replace this use of System.out by a logger.(ÑıÕàùÿÿÿÿ8éïş¾Ç1
-L	java:S106g"+Replace this use of System.out by a logger.(ŠÄ–êùÿÿÿÿ8êïş¾Ç1
-L	java:S106m"+Replace this use of System.out by a logger.(ĞéÚ¢üÿÿÿÿ8ÊÜ€¿Ç1
+java:S1172@"+Remove this unused method parameter "udao".(²üæ‰8óŒÈ¿Ç1
+L	java:S106D"+Replace this use of System.out by a logger.(ñæÃæøÿÿÿÿ8óŒÈ¿Ç1
+L	java:S106L"+Replace this use of System.out by a logger.(›áßûÿÿÿÿ8ôŒÈ¿Ç1
+L	java:S106["+Replace this use of System.out by a logger.(ÑıÕàùÿÿÿÿ8õŒÈ¿Ç1
+L	java:S106c"+Replace this use of System.out by a logger.(´Š÷úÿÿÿÿ8õŒÈ¿Ç1
+L	java:S106q"+Replace this use of System.out by a logger.(ŠÄ–êùÿÿÿÿ8öŒÈ¿Ç1
+L	java:S106w"+Replace this use of System.out by a logger.(ĞéÚ¢üÿÿÿÿ8öŒÈ¿Ç1

@@ -62,6 +62,7 @@ public class ItemDAO {
   }
 
   public void categoryManagement(UserDAO udao) {
+    printItem();
     String name = InputManger.getValue("삭제할 카테고리 >> ");
     if (!hasCategory(name)) {
       System.out.println("카테고리가 존재하지 않습니다.");
@@ -90,9 +91,18 @@ public class ItemDAO {
       System.out.println("이미 존재하는 상품입니다.");
       return;
     }
-    String price = InputManger.getValue("가격 >> ");
+    int price = 0;
+    while (true) {
+      try {
+        price = Integer.parseInt(InputManger.getValue("가격 >> "));
+      } catch (NumberFormatException e) {
+        System.out.println("정수값을 입력하세요");
+        continue;
+      }
+      break;
+    }
     String category = InputManger.getValue("카테고리 >> ");
-    itemList.add(new Item(item, Integer.parseInt(price), category));
+    itemList.add(new Item(item, price, category));
 
   }
 

@@ -1,26 +1,26 @@
 
 „
-java:S1192^"gDefine a constant instead of duplicating this literal "[1.ì¶”ê°€] [2.ì‚­ì œ] [0.ë’¤ë¡œê°€ê¸°]" 3 times.(“¼¢º8˜áÉ¾Ç1
+java:S1192_"gDefine a constant instead of duplicating this literal "[1.ì¶”ê°€] [2.ì‚­ì œ] [0.ë’¤ë¡œê°€ê¸°]" 3 times.(“¼¢º8Ô§à¿Ç1
 o
-java:S1192"RDefine a constant instead of duplicating this literal "ë©”ë‰´ ì…ë ¥ >> " 4 times.(ƒÓü8ĞÉ¿¾Ç1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î8ÒÉ¿¾Ç1
+java:S1192"RDefine a constant instead of duplicating this literal "ë©”ë‰´ ì…ë ¥ >> " 4 times.(ƒÓü8Õ§à¿Ç1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î8×§à¿Ç1
 8
-java:S3626+"Remove this redundant jump.(¥Ì¸È8¨Ê¿¾Ç1
-=	java:S131""Add a default case to this switch.(€ä¿;8©Ê¿¾Ç1
-G	java:S106"+Replace this use of System.out by a logger.(³Ñ¤8©Ê¿¾Ç1
-G	java:S1067"+Replace this use of System.out by a logger.(¥¦â8ªÊ¿¾Ç1
-G	java:S106;"+Replace this use of System.out by a logger.(Ş¿ü®8ªÊ¿¾Ç1
-G	java:S106@"+Replace this use of System.out by a logger.(øİŠÿ8«Ê¿¾Ç1
-L	java:S106E"+Replace this use of System.out by a logger.(¤Øù¶üÿÿÿÿ8«Ê¿¾Ç1
-=	java:S131G""Add a default case to this switch.(€ä¿;8«Ê¿¾Ç1
-L	java:S106I"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8«Ê¿¾Ç1
-=	java:S131_""Add a default case to this switch.(€ä¿;8¬Ê¿¾Ç1
-=	java:S131q""Add a default case to this switch.(€ä¿;8­Ê¿¾Ç1
->	java:S131‚""Add a default case to this switch.(€ä¿;8­Ê¿¾Ç1
-G	java:S106‘"+Replace this use of System.out by a logger.(Ë¦âX8­Ê¿¾Ç1
-M	java:S106’"+Replace this use of System.out by a logger.(¼•ä°ÿÿÿÿÿ8­Ê¿¾Ç1
->	java:S131”""Add a default case to this switch.(€ä¿;8®Ê¿¾Ç1
-M	java:S106–"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8­Ê¿¾Ç1
-H	java:S106¤"+Replace this use of System.out by a logger.(¨Õ¸§8®Ê¿¾Ç1
->	java:S131¦""Add a default case to this switch.(€ä¿;8õáÉ¾Ç1
-M	java:S106¨"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8®Ê¿¾Ç1
+java:S3626,"Remove this redundant jump.(¥Ì¸È8§¨à¿Ç1
+=	java:S131""Add a default case to this switch.(€ä¿;8¨¨à¿Ç1
+G	java:S106"+Replace this use of System.out by a logger.(³Ñ¤8¨¨à¿Ç1
+G	java:S1068"+Replace this use of System.out by a logger.(¥¦â8©¨à¿Ç1
+G	java:S106<"+Replace this use of System.out by a logger.(Ş¿ü®8©¨à¿Ç1
+G	java:S106A"+Replace this use of System.out by a logger.(øİŠÿ8ª¨à¿Ç1
+L	java:S106F"+Replace this use of System.out by a logger.(¤Øù¶üÿÿÿÿ8ª¨à¿Ç1
+=	java:S131H""Add a default case to this switch.(€ä¿;8ª¨à¿Ç1
+L	java:S106J"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8ª¨à¿Ç1
+=	java:S131`""Add a default case to this switch.(€ä¿;8«¨à¿Ç1
+=	java:S131r""Add a default case to this switch.(€ä¿;8¬¨à¿Ç1
+>	java:S131ƒ""Add a default case to this switch.(€ä¿;8­¨à¿Ç1
+G	java:S106’"+Replace this use of System.out by a logger.(Ë¦âX8®¨à¿Ç1
+M	java:S106“"+Replace this use of System.out by a logger.(¼•ä°ÿÿÿÿÿ8®¨à¿Ç1
+>	java:S131•""Add a default case to this switch.(€ä¿;8®¨à¿Ç1
+M	java:S106—"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8®¨à¿Ç1
+H	java:S106¥"+Replace this use of System.out by a logger.(¨Õ¸§8¯¨à¿Ç1
+>	java:S131§""Add a default case to this switch.(€ä¿;8¯¨à¿Ç1
+M	java:S106©"+Replace this use of System.out by a logger.(¥ûù»şÿÿÿÿ8¯¨à¿Ç1
