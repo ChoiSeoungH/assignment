@@ -44,7 +44,7 @@ public class UserDAO {
   public String getDataFromUserList() {
     String data = "";
     for (User u : userList) {
-      data+= u.getId()+"/"+u.getPw()+"/"+u.getName()+"\n" ;
+      data += u.getId() + "/" + u.getPw() + "/" + u.getName() + "\n";
     }
     return data;
   }
@@ -52,39 +52,39 @@ public class UserDAO {
   public String getDataFromCartList() {
     String data = "";
     for (Cart c : cartList) {
-      data+= c.getUserId()+"/"+c.getItemName()+"\n";
+      data += c.getUserId() + "/" + c.getItemName() + "\n";
     }
     return data;
   }
 
   public void joinUser() {
     String id = InputManger.getValue("id >> ");
-    if (isExistId(id)!=-1) {
+    if (isExistId(id) != -1) {
       System.out.println("이미 존재하는 아이디입니다.");
       return;
     }
     String pw = InputManger.getValue("pw >> ");
     String name = InputManger.getValue("name >> ");
     userList.add(new User(id, pw, name));
-    System.out.println(userList.get(userList.size()-1));
+    System.out.println(userList.get(userList.size() - 1));
     System.out.println("회원가입 완료");
   }
 
   private int isExistId(String id) {
-    int idx=0;
+    int idx = 0;
     for (User u : userList) {
       if (u.getId().equals(id)) {
         return idx;
       }
-      idx+=1;
+      idx += 1;
     }
     return -1;
   }
 
   public void quitUser() {
     String id = InputManger.getValue("id >> ");
-    int delIdx=isExistId(id);
-    if (delIdx==-1) {
+    int delIdx = isExistId(id);
+    if (delIdx == -1) {
       System.out.println("아이디가 존재하지 않습니다.");
       return;
     }
@@ -98,7 +98,7 @@ public class UserDAO {
     System.out.println("회원탈퇴 완료");
   }
 
-  public void printUser(){
+  public void printUser() {
     for (User u : userList) {
       System.out.println(u);
     }
@@ -106,8 +106,8 @@ public class UserDAO {
 
   public String login() {
     String id = InputManger.getValue("id >> ");
-    int delIdx=isExistId(id);
-    if (delIdx==-1) {
+    int delIdx = isExistId(id);
+    if (delIdx == -1) {
       System.out.println("아이디가 존재하지 않습니다.");
       return null;
     }
@@ -136,7 +136,7 @@ public class UserDAO {
       System.out.println("상품이이 없습니다.");
       return;
     }
-    for (int i = cartList.size()-1; i >= 0; i--) {
+    for (int i = cartList.size() - 1; i >= 0; i--) {
       if (cartList.get(i).getUserId().equals(log) && cartList.get(i).getItemName().equals(delName)) {
         cartList.remove(i);
         System.out.println("삭제완료");
@@ -144,14 +144,16 @@ public class UserDAO {
       }
     }
   }
+
   public void deleteAllCartItem(String name) {
-    for (int i = cartList.size()-1; i >= 0; i--) {
+    for (int i = cartList.size() - 1; i >= 0; i--) {
       if (cartList.get(i).getItemName().equals(name)) {
         cartList.remove(i);
       }
     }
     printCart();
   }
+
   private boolean hasItem(String log, String delName) {
     for (Cart c : cartList) {
       if (c.getUserId().equals(log) && c.getItemName().equals(delName)) {
@@ -169,8 +171,8 @@ public class UserDAO {
   public void userManagement() {
     printUser();
     String id = InputManger.getValue("id >> ");
-    int delIdx=isExistId(id);
-    if (delIdx==-1) {
+    int delIdx = isExistId(id);
+    if (delIdx == -1) {
       System.out.println("아이디가 존재하지 않습니다.");
       return;
     }
@@ -179,13 +181,55 @@ public class UserDAO {
     System.out.println("회원탈퇴 완료");
   }
 
-  public void cartManagement() {
-    printCart();
-  }
-
-  private void printCart() {
+  public void printCart() {
     for (Cart c : cartList) {
       System.out.println(c);
     }
+  }
+
+  public void addCart(ItemDAO idao) {
+    String id = InputManger.getValue("id >> ");
+    if (isExistId(id) == -1) {
+      System.out.println("존재하지 않는 아이디입니다.");
+      return;
+    }
+    String itemName = InputManger.getValue("name >> ");
+    if (idao.hasItem(itemName) == -1) {
+      System.out.println("상품명을 확인해주세요");
+      return;
+    }
+    cartList.add(new Cart(id, itemName));
+    System.out.println("장바구니추가 완료");
+  }
+
+  public void deleteCart() {
+    int delIdx = InputManger.getValue("삭제할 카트 >> ", 0, cartList.size());
+    userList.remove(delIdx);
+    System.out.println("장바구니삭제 완료");
+  }
+
+  public void addUser() {
+    String id = InputManger.getValue("id >> ");
+    if (isExistId(id) != -1) {
+      System.out.println("이미 존재하는 아이디입니다.");
+      return;
+    }
+    String pw = InputManger.getValue("pw >> ");
+    String name = InputManger.getValue("name >> ");
+    userList.add(new User(id, pw, name));
+    System.out.println(userList.get(userList.size() - 1));
+    System.out.println("회원추가 완료");
+
+  }
+
+  public void deleteUser() {
+    String id = InputManger.getValue("id >> ");
+    int delIdx = isExistId(id);
+    if (delIdx == -1) {
+      System.out.println("아이디가 존재하지 않습니다.");
+      return;
+    }
+    userList.remove(delIdx);
+    System.out.println("회원삭제 완료");
   }
 }

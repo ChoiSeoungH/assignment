@@ -50,7 +50,7 @@ public class ItemDAO {
 
   }
 
-  private int hasItem(String item) {
+  public int hasItem(String item) {
     int idx=0;
     for (Item i : itemList) {
       if (i.getName().equals(item)) {
@@ -62,6 +62,26 @@ public class ItemDAO {
   }
 
   public void categoryManagement(UserDAO udao) {
+    String name = InputManger.getValue("삭제할 카테고리 >> ");
+    if (!hasCategory(name)) {
+      System.out.println("카테고리가 존재하지 않습니다.");
+      return;
+    }
+    for (int i = itemList.size()-1; i >=0; i--) {
+      if (itemList.get(i).getCategory().equals(name)) {
+        itemList.remove(i);
+      }
+    }
+    System.out.println("카테고리 삭제완료");
+  }
+
+  private boolean hasCategory(String name) {
+    for (Item i : itemList) {
+      if (i.getCategory().equals(name)) {
+        return true;
+      }
+    }
+    return false;
   }
 
   public void addItem() {
@@ -88,4 +108,5 @@ public class ItemDAO {
     printItem();
     System.out.println("삭제완료");
   }
+
 }

@@ -79,10 +79,45 @@ public class ShopController {
           idao.categoryManagement(udao);
           break;
         case 3: //장바구니
-          udao.cartManagement();
+          printCartManagementMenu();
           break;
         case 4: //유저관리
-          udao.userManagement();
+          printUserManagementMenu();
+          break;
+      }
+    }
+  }
+
+  private void printUserManagementMenu() {
+    while (true) {
+      udao.printUser();
+      int menu = InputManger.getValue("[1.추가] [2.삭제] [0.뒤로가기]",0,2);
+      switch (menu) {
+        case 0:
+          return;
+        case 1:
+          udao.addUser();
+          break;
+        case 2:
+          udao.deleteUser();
+          break;
+      }
+    }
+
+  }
+
+  private void printCartManagementMenu() {
+    while (true) {
+      udao.printCart();
+      int menu = InputManger.getValue("[1.추가] [2.삭제] [0.뒤로가기]",0,2);
+      switch (menu) {
+        case 0:
+          return;
+        case 1:
+          udao.addCart(idao);
+          break;
+        case 2:
+          udao.deleteCart();
           break;
       }
     }
