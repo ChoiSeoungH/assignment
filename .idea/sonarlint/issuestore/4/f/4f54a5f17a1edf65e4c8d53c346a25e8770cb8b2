@@ -1,36 +1,38 @@
 
 d
-java:S1192?"GDefine a constant instead of duplicating this literal "id >> " 3 times.(¿ ²¶8‚ŒÉ½Ç1
+java:S1192="GDefine a constant instead of duplicating this literal "id >> " 4 times.(¿ ²¶8‚ŒÉ½Ç1
 d
-java:S1192D"GDefine a constant instead of duplicating this literal "pw >> " 3 times.(Ş•õ8‚ŒÉ½Ç1
+java:S1192B"GDefine a constant instead of duplicating this literal "pw >> " 3 times.(Ş•õ8‚ŒÉ½Ç1
+Š
+java:S1192X"hDefine a constant instead of duplicating this literal "ì•„ì´ë””ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤." 3 times.(‰€Ï¨ÿÿÿÿÿ8©­õ½Ç1
 
-java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¢ìãç8‚ŒÉ½Ç1
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¢ìãç8‚ŒÉ½Ç1
 ’
-java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Û¾Ïüÿÿÿÿ8ƒŒÉ½Ç1
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Û¾Ïüÿÿÿÿ8ƒŒÉ½Ç1
 9
-java:S16431"Use a StringBuilder instead.(€‘•Ï8ƒŒÉ½Ç1
+java:S1643/"Use a StringBuilder instead.(€‘•Ï8ƒŒÉ½Ç1
 >
-java:S16439"Use a StringBuilder instead.(Ç‚Ÿµşÿÿÿÿ8ƒŒÉ½Ç1
+java:S16437"Use a StringBuilder instead.(Ç‚Ÿµşÿÿÿÿ8ƒŒÉ½Ç1
 s
-java:S1104"QMake login a static final constant or non-public and provide accessors if needed.(óû¨üÿÿÿÿ8ƒŒÉ½Ç1
+java:S1104"QMake login a static final constant or non-public and provide accessors if needed.(óû¨üÿÿÿÿ8ƒŒÉ½Ç1
 q
-java:S1845m"ORename method "login" to prevent any misunderstanding/clash with field "login".(ûÆÀ“ùÿÿÿÿ8œŒÉ½Ç1
-G	java:S106A"+Replace this use of System.out by a logger.(Ú€öò8¢ŒÉ½Ç1
-L	java:S106G"+Replace this use of System.out by a logger.(Á™šÏÿÿÿÿÿ8£ŒÉ½Ç1
-G	java:S106H"+Replace this use of System.out by a logger.(ØÃ¯™8£ŒÉ½Ç1
-L	java:S106Z"+Replace this use of System.out by a logger.(‰€Ï¨ÿÿÿÿÿ8¤ŒÉ½Ç1
-G	java:S106_"+Replace this use of System.out by a logger.(äåôò8¥ŒÉ½Ç1
-G	java:S106b"+Replace this use of System.out by a logger.(ŒíÎ8¥ŒÉ½Ç1
-L	java:S106d"+Replace this use of System.out by a logger.(Ş«şÿÿÿÿ8¦ŒÉ½Ç1
-G	java:S106i"+Replace this use of System.out by a logger.(Âæ“ú8¦ŒÉ½Ç1
-L	java:S106q"+Replace this use of System.out by a logger.(‰€Ï¨ÿÿÿÿÿ8§ŒÉ½Ç1
-G	java:S106v"+Replace this use of System.out by a logger.(äåôò8§ŒÉ½Ç1
-G	java:S106y"+Replace this use of System.out by a logger.(Ç ôµ8¨ŒÉ½Ç1
-G	java:S106~"+Replace this use of System.out by a logger.(Şµ§ø8¨ŒÉ½Ç1
-H	java:S106"+Replace this use of System.out by a logger.(Áß‡Ü8©ŒÉ½Ç1
-M	java:S106Š"+Replace this use of System.out by a logger.(Úüıöøÿÿÿÿ8ªŒÉ½Ç1
-M	java:S106"+Replace this use of System.out by a logger.(ĞéÚ¢üÿÿÿÿ8ªŒÉ½Ç1
-F
-java:S1128"$Remove this unused import 'vo.Item'.(¤İÅùÿÿÿÿ8İ¥É½Ç1
-O
-java:S1128	"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8İ¥É½Ç1
+java:S1845k"ORename method "login" to prevent any misunderstanding/clash with field "login".(ûÆÀ“ùÿÿÿÿ8œŒÉ½Ç1
+G	java:S106?"+Replace this use of System.out by a logger.(Ú€öò8¢ŒÉ½Ç1
+L	java:S106E"+Replace this use of System.out by a logger.(Á™šÏÿÿÿÿÿ8£ŒÉ½Ç1
+G	java:S106F"+Replace this use of System.out by a logger.(ØÃ¯™8£ŒÉ½Ç1
+L	java:S106X"+Replace this use of System.out by a logger.(‰€Ï¨ÿÿÿÿÿ8¤ŒÉ½Ç1
+G	java:S106]"+Replace this use of System.out by a logger.(äåôò8¥ŒÉ½Ç1
+G	java:S106`"+Replace this use of System.out by a logger.(ŒíÎ8¥ŒÉ½Ç1
+L	java:S106b"+Replace this use of System.out by a logger.(Ş«şÿÿÿÿ8¦ŒÉ½Ç1
+G	java:S106g"+Replace this use of System.out by a logger.(Âæ“ú8¦ŒÉ½Ç1
+L	java:S106o"+Replace this use of System.out by a logger.(‰€Ï¨ÿÿÿÿÿ8§ŒÉ½Ç1
+G	java:S106t"+Replace this use of System.out by a logger.(äåôò8§ŒÉ½Ç1
+G	java:S106w"+Replace this use of System.out by a logger.(Ç ôµ8¨ŒÉ½Ç1
+G	java:S106|"+Replace this use of System.out by a logger.(Şµ§ø8¨ŒÉ½Ç1
+G	java:S106"+Replace this use of System.out by a logger.(Áß‡Ü8©ŒÉ½Ç1
+M	java:S106ˆ"+Replace this use of System.out by a logger.(Úüıöøÿÿÿÿ8ªŒÉ½Ç1
+M	java:S106"+Replace this use of System.out by a logger.(ĞéÚ¢üÿÿÿÿ8ªŒÉ½Ç1
+M	java:S106®"+Replace this use of System.out by a logger.(‰€Ï¨ÿÿÿÿÿ8Ïèù½Ç1
+H	java:S106±"+Replace this use of System.out by a logger.(ŒíÎ8Õ¥¾Ç1
+M	java:S106³"+Replace this use of System.out by a logger.(Ş«şÿÿÿÿ8‘Õ¥¾Ç1
+H	java:S106¼"+Replace this use of System.out by a logger.(Áß‡Ü8ò¨¾Ç1

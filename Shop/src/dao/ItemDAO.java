@@ -41,7 +41,7 @@ public class ItemDAO {
   public void buyItem(String log, UserDAO udao) {
     printItem();
     String item = InputManger.getValue("구매할 상품 >> ");
-    if (!hasItem(item)) {
+    if (hasItem(item)==-1) {
       System.out.println("상품명을 확인해주세요");
       return;
     }
@@ -50,12 +50,42 @@ public class ItemDAO {
 
   }
 
-  private boolean hasItem(String item) {
+  private int hasItem(String item) {
+    int idx=0;
     for (Item i : itemList) {
       if (i.getName().equals(item)) {
-        return true;
+        return idx;
       }
+      idx+=1;
     }
-    return false;
+    return -1;
+  }
+
+  public void categoryManagement(UserDAO udao) {
+  }
+
+  public void addItem() {
+    String item = InputManger.getValue("추가할 상품 >> ");
+    if (hasItem(item)!=-1) {
+      System.out.println("이미 존재하는 상품입니다.");
+      return;
+    }
+    String price = InputManger.getValue("가격 >> ");
+    String category = InputManger.getValue("카테고리 >> ");
+    itemList.add(new Item(item, Integer.parseInt(price), category));
+
+  }
+
+  public void deleteItem(UserDAO udao) {
+    String item = InputManger.getValue("삭제할 상품 >> ");
+    int delIdx=hasItem(item);
+    if (delIdx==-1) {
+      System.out.println("존재하지 않는 상품입니다.");
+      return;
+    }
+    udao.deleteAllCartItem(itemList.get(delIdx).getName());
+    itemList.remove(delIdx);
+    printItem();
+    System.out.println("삭제완료");
   }
 }

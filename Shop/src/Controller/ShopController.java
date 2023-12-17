@@ -65,20 +65,43 @@ public class ShopController {
   }
 
   private void printAdminMenu() {
-    System.out.println("[1.아이템관리] [2.카테고리관리] [3.장바구니관리] [4.유저관리] [0.뒤로가기] ");
-    int menu = InputManger.getValue("메뉴 입력 >> ", 0, 4);
-    switch (menu) {
-      case 0:
-        System.out.println("뒤로가기");
-        return;
-      case 1: //아이템
-        break;
-      case 2: //카테고리
-        break;
-      case 3: //장바구니
-        break;
-      case 4: //유저관리
-        break;
+    while (true) {
+      System.out.println("[1.아이템관리] [2.카테고리관리] [3.장바구니관리] [4.유저관리] [0.뒤로가기] ");
+      int menu = InputManger.getValue("메뉴 입력 >> ", 0, 4);
+      switch (menu) {
+        case 0:
+          System.out.println("뒤로가기");
+          return;
+        case 1: //아이템
+          printitemManagementMenu();
+          break;
+        case 2: //카테고리
+          idao.categoryManagement(udao);
+          break;
+        case 3: //장바구니
+          udao.cartManagement();
+          break;
+        case 4: //유저관리
+          udao.userManagement();
+          break;
+      }
+    }
+  }
+
+  private void printitemManagementMenu() {
+    while (true) {
+      idao.printItem();
+      int menu = InputManger.getValue("[1.추가] [2.삭제] [0.뒤로가기]",0,2);
+      switch (menu) {
+        case 0:
+          return;
+        case 1:
+          idao.addItem();
+          break;
+        case 2:
+          idao.deleteItem(udao);
+          break;
+      }
     }
   }
 

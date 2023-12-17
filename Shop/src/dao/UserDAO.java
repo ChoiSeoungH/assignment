@@ -2,11 +2,9 @@ package dao;
 
 import Utils.InputManger;
 import vo.Cart;
-import vo.Item;
 import vo.User;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class UserDAO {
   private final ArrayList<Cart> cartList;
@@ -146,6 +144,14 @@ public class UserDAO {
       }
     }
   }
+  public void deleteAllCartItem(String name) {
+    for (int i = cartList.size()-1; i >= 0; i--) {
+      if (cartList.get(i).getItemName().equals(name)) {
+        cartList.remove(i);
+      }
+    }
+    printCart();
+  }
   private boolean hasItem(String log, String delName) {
     for (Cart c : cartList) {
       if (c.getUserId().equals(log) && c.getItemName().equals(delName)) {
@@ -158,5 +164,28 @@ public class UserDAO {
   public void addItemtoMyCart(String log, String item) {
     cartList.add(new Cart(log, item));
     printMyCart(log);
+  }
+
+  public void userManagement() {
+    printUser();
+    String id = InputManger.getValue("id >> ");
+    int delIdx=isExistId(id);
+    if (delIdx==-1) {
+      System.out.println("아이디가 존재하지 않습니다.");
+      return;
+    }
+    System.out.println(userList.get(delIdx));
+    userList.remove(delIdx);
+    System.out.println("회원탈퇴 완료");
+  }
+
+  public void cartManagement() {
+    printCart();
+  }
+
+  private void printCart() {
+    for (Cart c : cartList) {
+      System.out.println(c);
+    }
   }
 }
