@@ -81,19 +81,15 @@ public class UserDAO {
     return -1;
   }
 
-  public void quitUser() {
-    String id = InputManger.getValue("id >> ");
-    int delIdx = isExistId(id);
-    if (delIdx == -1) {
-      System.out.println("아이디가 존재하지 않습니다.");
-      return;
-    }
+  public void quitUser(String log) {
+    System.out.println(log+"님 회원탈퇴");
+    int delIdx = isExistId(log);
     String pw = InputManger.getValue("pw >> ");
     if (!userList.get(delIdx).getPw().equals(pw)) {
       System.out.println("비밀번호가 일치 하지 않습니다");
       return;
     }
-    deleteAllCartItem(id);
+    deleteAllCartItem(log);
     System.out.println(userList.get(delIdx));
     userList.remove(delIdx);
     System.out.println("회원탈퇴 완료");
@@ -123,7 +119,7 @@ public class UserDAO {
 
   public void printMyCart(String log) {
     System.out.println("회원 아이디 상품");
-    int total=0;
+    int total = 0;
     for (Cart c : cartList) {
       if (c.getUserId().equals(log)) {
         System.out.println(c);
@@ -154,7 +150,6 @@ public class UserDAO {
         cartList.remove(i);
       }
     }
-    printCart();
   }
 
   private boolean hasItem(String log, String delName) {
@@ -185,9 +180,9 @@ public class UserDAO {
   }
 
   public void printCart() {
-    int i=0;
+    int i = 0;
     for (Cart c : cartList) {
-      System.out.printf("%d\t %s\t %s%n",++i,c.getUserId(),c.getItemName());
+      System.out.printf("%d\t %s\t %s%n", ++i, c.getUserId(), c.getItemName());
     }
   }
 
@@ -207,7 +202,7 @@ public class UserDAO {
   }
 
   public void deleteCart() {
-    int delIdx = InputManger.getValue("삭제할 카트[%d~%d] >> ".formatted(1,cartList.size()), 1, cartList.size())-1;
+    int delIdx = InputManger.getValue("삭제할 카트[%d~%d] >> ".formatted(1, cartList.size()), 1, cartList.size()) - 1;
     cartList.remove(delIdx);
     System.out.println("장바구니삭제 완료");
   }
@@ -239,19 +234,33 @@ public class UserDAO {
   }
 
   public void printMyCart(String log, ItemDAO idao) {
+    if (!isExistCart(log)) {
+      System.out.println("장바구니 목록이 없습니다.");
+      return;
+    }
     System.out.println("회원 아이디 상품");
-    int total=0;
+    int total = 0;
     for (Cart c : cartList) {
       if (c.getUserId().equals(log)) {
         System.out.print(c);
         for (Item i : idao.getItemList()) {
           if (c.getItemName().equals(i.getName())) {
-            System.out.print(" "+i.getPrice()+"원\n");
+            System.out.print(" " + i.getPrice() + "원\n");
             total += i.getPrice();
           }
         }
       }
     }
-    System.out.println("총액 : "+total+"원");
+    System.out.println("총액 : " + total + "원");
+  }
+
+  private boolean isExistCart(String log) {
+    for (Cart c : cartList) {
+      if (c.getUserId().equals(log)) {
+        return true;
+      }
+    }
+    return false;
   }
 }
+

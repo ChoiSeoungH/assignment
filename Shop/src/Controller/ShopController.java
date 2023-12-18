@@ -22,28 +22,47 @@ public class ShopController {
     init();
     while (true) {
       printMainMenu();
-      int menu = Utils.InputManger.getValue("메뉴 입력 >> ", 0, 4, 100);
+      int menu = InputManger.getValue("메뉴 입력 >> ", 0, 4, 100);
       switch (menu) {
         case 0: //종료
-          FileManager.saveFile(idao,udao);
+          FileManager.saveFile(idao, udao);
           System.out.println("종료");
           return;
         case 1: //가입
+          if (isLogin()) {
+            System.out.println("로그아웃 후 이용");
+            continue;
+          }
           udao.joinUser();
           break;
         case 2: //탈퇴
-          udao.quitUser();
+          if (!isLogin()) {
+            System.out.println("로그인 후 이용");
+            continue;
+          }
+          udao.quitUser(log);
           break;
         case 3: //로그인
-          log = udao.login();
-          if (log!=null) {
-            printMemberMenu();
+          if (isLogin()) {
+            System.out.println("로그아웃 후 이용");
+            continue;
           }
+          log = udao.login();
+          printMemberMenu();
           break;
         case 4: //로그아웃
-          if (!isLogin()) continue;
+          if (!isLogin()) {
+            System.out.println("로그인 후 이용");
+            continue;
+          }
+          log = null;
+          System.out.println("로그아웃 완료");
           break;
         case 100: // 관리자
+          if (isLogin()) {
+            System.out.println("로그아웃 후 이용");
+            continue;
+          }
           printAdminMenu();
           break;
       }//eos
@@ -52,12 +71,9 @@ public class ShopController {
   }
 
   private boolean isLogin() {
-    if (log==null) {
-      System.out.println("로그인 후 이용");
+    if (log == null) {
       return false;
     }
-    log = null;
-    System.out.println("로그아웃 완료");
     return true;
   }
 
@@ -92,7 +108,7 @@ public class ShopController {
   private void printUserManagementMenu() {
     while (true) {
       udao.printUser();
-      int menu = InputManger.getValue("[1.추가] [2.삭제] [0.뒤로가기]",0,2);
+      int menu = InputManger.getValue("[1.추가] [2.삭제] [0.뒤로가기]", 0, 2);
       switch (menu) {
         case 0:
           return;
@@ -110,7 +126,7 @@ public class ShopController {
   private void printCartManagementMenu() {
     while (true) {
       udao.printCart();
-      int menu = InputManger.getValue("[1.추가] [2.삭제] [0.뒤로가기]",0,2);
+      int menu = InputManger.getValue("[1.추가] [2.삭제] [0.뒤로가기]", 0, 2);
       switch (menu) {
         case 0:
           return;
@@ -127,7 +143,7 @@ public class ShopController {
   private void printitemManagementMenu() {
     while (true) {
       idao.printItem();
-      int menu = InputManger.getValue("[1.추가] [2.삭제] [0.뒤로가기]",0,2);
+      int menu = InputManger.getValue("[1.추가] [2.삭제] [0.뒤로가기]", 0, 2);
       switch (menu) {
         case 0:
           return;
@@ -143,7 +159,7 @@ public class ShopController {
 
   private void printMemberMenu() {
     while (true) {
-      System.out.println(log+"님 로그인중");
+      System.out.println(log + "님 로그인중");
       System.out.println("[1.쇼핑] [2.장바구니목록] [0.뒤로가기]");
       int menu = InputManger.getValue("메뉴 입력 >> ", 0, 4);
       switch (menu) {
@@ -154,7 +170,7 @@ public class ShopController {
           printCartMenu();
           break;
         case 2://장바구니
-          udao.printMyCart(log,idao);
+          udao.printMyCart(log, idao);
           break;
       }
     }
@@ -169,13 +185,13 @@ public class ShopController {
           System.out.println("뒤로가기");
           return;
         case 1: //내장바구니
-          udao.printMyCart(log,idao);
+          udao.printMyCart(log, idao);
           break;
         case 2: //최신 상품 삭제
           udao.deleteMyCartItem(log);
           break;
         case 3: //구입
-          idao.buyItem(log,udao);
+          idao.buyItem(log, udao);
           break;
       }
     }
